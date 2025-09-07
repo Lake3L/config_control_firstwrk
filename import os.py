@@ -17,6 +17,9 @@ class Shell:
         args = parser[1:]
         return command, args
     
+    def func():
+        print("SSSStestSSSS")
+        
     def execute_command(self, command, args):
         if command == "exit":
             self.running = False
