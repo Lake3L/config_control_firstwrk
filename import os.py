@@ -5,11 +5,10 @@ class Shell:
     def __init__(self): #
         self.running = True
 
-    def get_promt(self):
-
+    def get_prompt(self):
         username = os.getlogin()
         hostname = platform.node()
-        invite = f"{username}@(hostname):~$: " #2 этап
+        invite = f"{username}@{hostname}:~$ " #2 этап
         return invite
 
     def parser_input(self, input_string): #3 этап
@@ -33,9 +32,8 @@ class Shell:
 
     def run(self):
         while self.running:
-            user_input = input(self.get_promt()) #Ввод
+            user_input = input(self.get_prompt()) #Ввод
             command, args = self.parser_input(user_input) #Парсинг ввода
-
             self.execute_command(command, args) #запуск обработчика комманд
 
 if __name__ == "__main__":
