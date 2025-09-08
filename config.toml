@@ -1,0 +1,5 @@
+[vfs]
+path = "/Users/currentUser/this_vfs"
+
+[script]
+path = "/Users/currentUser/this_script"
