@@ -35,7 +35,7 @@ class Config: # Этап 2
         return self
 
 class Shell: # Этап 1
-    def __init__(self, config): 
+    def __init__(self): 
         self.running = True
 
 
