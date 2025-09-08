@@ -50,6 +50,9 @@ class Shell: # Этап 1
         command = parser[0]
         args = parser[1:]
         return command, args
+    
+    def dopdop():
+        print("dopdop")
         
     def execute_command(self, command, args):
         if command == "exit":# 6 пункт
