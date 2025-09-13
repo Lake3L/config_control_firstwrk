@@ -4,36 +4,6 @@ import platform
 import tomli
 from pathlib import Path
 
-
-class Config: # Этап 2
-    def __init__(self):
-        self.pathVfs = None
-        self.pathScript = None
-        self.pathConfig = None
-
-    def command_info(self):
-        parser = argparse.ArgumentParser(description='Параметры командной строки') # Создание трёх стандартных команд; пукнт 1 
-        parser.add_argument('--vfs-path', 
-                            str, 
-                            default='default VFS-path',
-                            help='Доступ к файлам VFS')
-        parser.add_argument('--script-path', 
-                            str, 
-                            default='default script path',
-                            help='Доступ к стартовому скрипту')
-        parser.add_argument('--config-path', 
-                            str,
-                            default='default config path', 
-                            help='Доступ к конфигурационному файлу')
-        
-        args = parser.parse_args() # парсинг аргументов
-
-        self.parser = args.pathVfs
-        self.parser = args.pathScript
-        self.parser = args.pathConfig
-
-        return self
-
 class Shell: # Этап 1
     def __init__(self): 
         self.running = True
